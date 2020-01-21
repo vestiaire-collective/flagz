@@ -7,11 +7,26 @@ import (
 )
 
 func main() {
-	var arr flagz.Flagz
+	var stringz flagz.Flagz
+	var boolz flagz.Flagz
+	var intz flagz.Flagz
+	var floatz flagz.Flagz
 
-	flag.Var(&arr, "foo", "bla")
+	flag.Var(&stringz, "string", "strings")
+	flag.Var(&boolz, "bool", "bools")
+	flag.Var(&intz, "int", "ints")
+	flag.Var(&floatz, "float", "floats")
 
 	flag.Parse()
 
-	fmt.Printf("%+v\n%+v\n", arr.Array(), arr.String())
+	strings := stringz.Stringz()
+	bools, boolErr := boolz.Boolz()
+	ints, intErr := intz.Intz()
+	floats, floatErr := floatz.Floatz()
+
+
+	fmt.Printf("%+v\n", strings)
+	fmt.Printf("%+v\n%+v\n", bools, boolErr)
+	fmt.Printf("%+v\n%+v\n", ints, intErr)
+	fmt.Printf("%+v\n%+v\n", floats, floatErr)
 }
