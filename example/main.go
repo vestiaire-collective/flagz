@@ -3,7 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/chaseisabelle/flagz"
+
+	"github.com/vestiaire-collective/flagz"
 )
 
 func main() {
@@ -23,7 +24,6 @@ func main() {
 	bools, boolErr := boolz.Boolz()
 	ints, intErr := intz.Intz()
 	floats, floatErr := floatz.Floatz()
-
 
 	fmt.Printf("%+v\n", strings)
 	fmt.Printf("%+v\n%+v\n", bools, boolErr)

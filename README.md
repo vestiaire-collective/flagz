@@ -11,7 +11,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/chaseisabelle/flagz"
+	"github.com/vestiaire-collective/flagz"
 )
 
 func main() {
